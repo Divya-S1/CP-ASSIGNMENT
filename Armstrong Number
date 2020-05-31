@@ -1,0 +1,26 @@
+/* Read a Natural Number and check whether the number is Armstrong or not*/
+
+#include <stdio.h> 
+#include <stdlib.h>
+void main() 
+  { 
+   int n, copy,armstrong=0,temp; 
+   printf("Enter a number:\n"); 
+   scanf("%d", &n); 
+   copy=n;
+   while(n>0)
+     {
+       temp=(n%10)*(n%10)*(n%10);
+       armstrong=armstrong+temp;
+       n=n/10;
+     }
+ if ( armstrong==copy) 
+   { 
+     printf("%d The given number is an Armstrong number\n", n); 
+   }
+ else 
+   {
+     printf("%d The given number is not a Armstrong number\n", n); 
+   } 
+  }  
+ 
