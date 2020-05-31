@@ -1,0 +1,25 @@
+/*Read a string store it in an array and obtain its reverse by
+      using a  user defined function*/
+      
+#include<stdio.h>
+#include<string.h>
+void reverse_string(char string[])
+ {
+   int i,n;
+   char c;
+   n=strlen(string);
+   for(i=0;i<n/2;i++)
+    { 
+      c=string[i];
+      string[i]=string[n-1-i];
+      string[n-1-i]=c;
+    }
+}
+int main()
+{
+  char string[100];
+  printf("Enter the string \n"); 
+  scanf("%[^\n]",string);
+  reverse_string(string);
+  printf("Reversed string is=%s\n",string);
+}
